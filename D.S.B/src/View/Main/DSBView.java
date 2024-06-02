@@ -1,6 +1,5 @@
 package View.Main;
 
-import Controller.JavaSwingController;
 import javax.swing.ImageIcon;
 
 public class DSBView extends javax.swing.JFrame {
