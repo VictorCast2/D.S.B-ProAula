@@ -12,11 +12,10 @@ public class ConnectController{
     ConnectModel Connect = new ConnectModel();
     
     // Metodo de Conectar
-    public Connection Connect() {   
-        
+    public Connection Connect(){   
         try {
             // Metodo
-            Class.forName(Connect.Driver);
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Driver cargado con exito... ");
             try {
                 Connect.Conn = DriverManager.getConnection(Connect.Url, Connect.Usuario, Connect.Contrasenna);
@@ -35,7 +34,7 @@ public class ConnectController{
     }
     
     // Metodo de Desconectar
-    public void Desconnect() {
+    public void Desconnect(){
         try {
             Connect.Conn.close();
             System.out.println(" Se deconecto exitosamente ... ");
